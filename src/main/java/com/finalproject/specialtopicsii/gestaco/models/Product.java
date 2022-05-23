@@ -5,7 +5,7 @@ import java.util.Set;
 public class Product {
 
     private int id;
-    private char name;
+    private String name;
     private int price;
 
     public void setId(int id) {
@@ -16,11 +16,11 @@ public class Product {
         return id;
     }
 
-    public void setName(char name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public char getName() {
+    public String getName() {
         return name;
     }
 
