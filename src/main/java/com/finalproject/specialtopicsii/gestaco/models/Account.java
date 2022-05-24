@@ -7,12 +7,16 @@ import java.util.Set;
 
 public class Account {
     private int id;
-    private char document;
-    private char address;
+    private String document;
+    private String address;
     private @Nullable int account_id;
-    private char password;
-    private char email;
-    private char role;
+    private String password;
+    private String email;
+    private String role;
+    private Set<Client> clientes;
+    private Set<Sale> sales;
+    private Set<Link> links;
+    private Set<Product> products;
 
     public void setId(int id) {
         this.id = id;
@@ -22,19 +26,19 @@ public class Account {
         return id;
     }
 
-    public void setDocument(char document) {
+    public void setDocument(String document) {
         this.document = document;
     }
 
-    public char getDocument() {
+    public String getDocument() {
         return document;
     }
 
-    public void setAddress(char address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public char getAddress() {
+    public String getAddress() {
         return address;
     }
 
@@ -46,27 +50,27 @@ public class Account {
         return account_id;
     }
 
-    public void setPassword(char password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public char getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setEmail(char email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public char getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public char getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(char role) {
+    public void setRole(String role) {
         this.role = role;
     }
 }
