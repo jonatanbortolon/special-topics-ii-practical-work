@@ -1,13 +1,16 @@
 package com.finalproject.specialtopicsii.gestaco.models;
 
+import java.util.Set;
+
 import org.springframework.lang.Nullable;
 
 public class Client {
     private int id;
-    private char name;
-    private @Nullable char phone;
-    private @Nullable char email;
-    private char document;
+    private String name;
+    private @Nullable String phone;
+    private @Nullable String email;
+    private String document;
+    private Set<Sale> sales;
 
     public void setId(int id) {
         this.id = id;
@@ -17,35 +20,35 @@ public class Client {
         return id;
     }
 
-    public void setName(char name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public char getName() {
+    public String getName() {
         return name;
     }
 
-    public void setPhone(char phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public char getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setEmail(char email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public char getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setDocument(char document) {
+    public void setDocument(String document) {
         this.document = document;
     }
 
-    public char getDocument() {
+    public String getDocument() {
         return document;
     }
 }
