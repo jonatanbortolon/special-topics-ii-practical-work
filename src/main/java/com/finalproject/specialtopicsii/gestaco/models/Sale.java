@@ -2,7 +2,7 @@ package com.finalproject.specialtopicsii.gestaco.models;
 
 public class Sale {
     private int id;
-    private char payment_method;
+    private String payment_method;
 
     public void setId(int id) {
         this.id = id;
@@ -12,11 +12,11 @@ public class Sale {
         return id;
     }
 
-    public void setPayment_method(char payment_method) {
+    public void setPayment_method(String payment_method) {
         this.payment_method = payment_method;
     }
 
-    public char getPayment_method() {
+    public String getPayment_method() {
         return payment_method;
     }
 

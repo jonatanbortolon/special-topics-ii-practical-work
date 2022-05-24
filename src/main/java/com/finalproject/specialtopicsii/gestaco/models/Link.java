@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Link {
     private int id;
     private String slug;
-    private char role;
+    private String role;
     private LocalDateTime expires_at;
 
     public void setId(int id) {
@@ -24,11 +24,11 @@ public class Link {
         return slug;
     }
 
-    public void setRole(char role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
-    public char getRole() {
+    public String getRole() {
         return role;
     }
 
