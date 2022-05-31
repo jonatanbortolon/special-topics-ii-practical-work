@@ -7,6 +7,7 @@ public class Product {
     private int id;
     private String name;
     private int price;
+    private Set<Stock> stocks;
 
     public void setId(int id) {
         this.id = id;
