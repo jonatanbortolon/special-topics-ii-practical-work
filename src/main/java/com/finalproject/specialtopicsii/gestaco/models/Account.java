@@ -13,6 +13,7 @@ public class Account {
     private String password;
     private String email;
     private String role;
+    private Set<Account> accounts;
     private Set<Client> clientes;
     private Set<Sale> sales;
     private Set<Link> links;
