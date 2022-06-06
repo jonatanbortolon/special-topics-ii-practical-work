@@ -2,21 +2,29 @@ package com.finalproject.specialtopicsii.gestaco.models;
 
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import org.springframework.lang.Nullable;
 
+@Entity
 public class Client {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String name;
     private @Nullable String phone;
     private @Nullable String email;
     private String document;
     private Set<Sale> sales;
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
