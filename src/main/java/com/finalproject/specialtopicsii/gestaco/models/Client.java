@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 import org.springframework.lang.Nullable;
 
@@ -18,6 +20,8 @@ public class Client {
     private @Nullable String phone;
     private @Nullable String email;
     private String document;
+    @OneToMany
+    @JoinColumn(name = "client_id")
     private Set<Sale> sales;
 
     public void setId(long id) {
