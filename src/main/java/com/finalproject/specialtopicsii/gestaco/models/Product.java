@@ -1,10 +1,7 @@
 package com.finalproject.specialtopicsii.gestaco.models;
 
 import java.util.Set;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Product {
@@ -13,6 +10,8 @@ public class Product {
     private long id;
     private String name;
     private int price;
+    @OneToMany
+    @JoinColumn(name = "product_id")
     private Set<Stock> stocks;
 
     public void setId(long id) {

@@ -4,10 +4,7 @@ import com.finalproject.specialtopicsii.gestaco.models.Account;
 import org.springframework.lang.Nullable;
 
 import java.util.Set;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Account {
@@ -21,10 +18,20 @@ public class Account {
     private String password;
     private String email;
     private String role;
+    @OneToMany
+    @JoinColumn(name = "account_id")
     private Set<Account> accounts;
+    @OneToMany
+    @JoinColumn(name = "account_id")
     private Set<Client> clientes;
+    @OneToMany
+    @JoinColumn(name = "account_id")
     private Set<Sale> sales;
+    @OneToMany
+    @JoinColumn(name = "account_id")
     private Set<Link> links;
+    @OneToMany
+    @JoinColumn(name = "account_id")
     private Set<Product> products;
 
     public void setId(long id) {
