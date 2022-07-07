@@ -6,6 +6,7 @@ import com.finalproject.specialtopicsii.gestaco.exceptions.ClientNotFoundExcepti
 import com.finalproject.specialtopicsii.gestaco.models.Client;
 import com.finalproject.specialtopicsii.gestaco.repositories.ClientRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,6 +23,26 @@ public class ClientService {
         if (opt.isPresent()) {
             return opt.get();
         } else {
+            throw new ClientNotFoundException(id);
+        }
+    }
+
+    public List<Client> list() {
+        return clientRepository.findAll();
+    }
+
+    public Client save(Client client) {
+        return clientRepository.save(client);
+    }
+
+    public Client update(Long id, Client client) {
+        return clientRepository.save(client);
+    }
+
+    public void delete(Long id) {
+        try {
+            clientRepository.deleteById(id);
+        } catch (RuntimeException e) {
             throw new ClientNotFoundException(id);
         }
     }
