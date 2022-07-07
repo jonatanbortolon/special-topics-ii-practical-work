@@ -1,6 +1,5 @@
 package com.finalproject.specialtopicsii.gestaco.models;
 
-import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +9,7 @@ import javax.persistence.Id;
 public class Stock {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private int quantity;
     private String launch_type;
@@ -39,4 +38,3 @@ public class Stock {
         return launch_type;
     }
 }
-
